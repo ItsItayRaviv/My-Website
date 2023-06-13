@@ -28,34 +28,33 @@ export class HomeComponent implements AfterViewInit {
     if (contentBox)
     {
       this.content = contentBox;
-          
-
-      this.renderer.listen(this.content, 'mousemove', (e: MouseEvent) =>
-      {
-        fromEvent<MouseEvent>(this.content, 'mousemove')
-        .pipe( throttleTime(100) ).subscribe( (event: MouseEvent) =>
+      fromEvent<MouseEvent>(this.content, 'mousemove')
+      .subscribe( (event: MouseEvent) =>
         { this.onMouseMove(event);  } )
-      } )
     }
   }
 
   onMouseMove(e: MouseEvent) {
     if (this.moveReady) {
-      console.log('mouseMove');
+      //console.log('mouse move');
         this.circles.forEach(circle => {
         this.renderer.setStyle(circle, 'top', `${e.clientY - this.content.offsetTop}px`);
         this.renderer.setStyle(circle, 'left', `${e.clientX - this.content.offsetLeft}px`);
         this.moveReady = false;
-        setTimeout(() => this.moveReady = true, 100)
+        setTimeout(() => this.moveReady = true, 50)
       });
+    }
+    else{
+      //console.log('mouse move not ready');
     }
   }
 
   onMouseLeave() {
-    console.log('mouse leave');
+    //console.log('mouse leave');
     this.circles.forEach((circle) => {
       const height = this.content.clientHeight;
       const width = this.content.clientWidth;
+      this.renderer.setStyle(circle, 'background-color' , '#377');
       switch (circle.id) {
         case 'circle1':
           this.renderer.setStyle(circle, 'top', `${height * 0.015}px`);
@@ -66,6 +65,12 @@ export class HomeComponent implements AfterViewInit {
           this.renderer.setStyle(circle, 'left', `${width * 0.662}px`);
           break;
       }
+    });
+  }
+  onMouseEnter() {
+    //console.log('mouse enter');
+    this.circles.forEach(circle => {
+      this.renderer.setStyle(circle, 'background-color' , 'white');
     });
   }
 }

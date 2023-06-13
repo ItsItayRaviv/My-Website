@@ -27,7 +27,14 @@
   height: 5vh;
   border-radius: 50%;
   background-color: #377;
-  top: 0;
-  left: 2vh;
-  transition: top 0.2s, left 0.2s;
+  transition: top 0.2s, left 0.2s, background-color 0.5s;
+}
+
+#circle1{
+    top: 1.5%;
+    left: 16.7%;
+}
+#circle2{
+    top: 53.3%;
+    left: 66.2%;
 }
