@@ -1,0 +1,43 @@
+.container {
+    margin: 48px 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   
+  .navbar {
+    background-color: darkslategray;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+  }
+
+  .link-box{
+    display: flex;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  .link:hover{
+    margin-top: -3px;
+    text-shadow: -15px 0 15px rgb(255, 148, 148), 15px 0 15px rgb(140, 140, 255);
+    font-size: 4vh;
+    margin-right: 4vh;
+  }
+   
+  .link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3vh;
+    margin-right: 6vh;
+    display: flex;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .logo img{
+    width: 10vw;
+    height: fit-content;
+  }

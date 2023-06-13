@@ -1,0 +1,33 @@
+.content{
+  width: 72vh;
+  background-color: #acc;
+  position: relative;
+  cursor: none;
+}
+.description{
+  width: 100%;
+  background-color: #aaa;
+}
+.name-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 26vh;
+  letter-spacing: 2vh;
+}
+.name-box > div {
+  float: left;
+}
+
+
+.circle {
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  background-color: #377;
+  top: 0;
+  left: 2vh;
+  transition: top 0.2s, left 0.2s;
+}
