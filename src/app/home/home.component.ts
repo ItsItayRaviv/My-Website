@@ -38,8 +38,8 @@ export class HomeComponent implements AfterViewInit {
     if (this.moveReady) {
       //console.log('mouse move');
         this.circles.forEach(circle => {
-        this.renderer.setStyle(circle, 'top', `${e.clientY - this.content.offsetTop}px`);
-        this.renderer.setStyle(circle, 'left', `${e.clientX - this.content.offsetLeft}px`);
+        this.renderer.setStyle(circle, 'top', `${e.clientY - this.content.offsetTop - 20}px`);
+        this.renderer.setStyle(circle, 'left', `${e.clientX - this.content.offsetLeft - 20}px`);
         this.moveReady = false;
         setTimeout(() => this.moveReady = true, 50)
       });
