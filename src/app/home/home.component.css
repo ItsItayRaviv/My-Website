@@ -1,10 +1,12 @@
 .content{
-  width: 72vh;
   background-color: #acc;
   position: relative;
   cursor: none;
+  aspect-ratio: 1 1;
+  height: 75vmin;
 }
 .description{
+  height: 5vmin;
   width: 100%;
   background-color: #aaa;
 }
@@ -13,8 +15,8 @@
   display: flex;
   justify-content: center;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 26vh;
-  letter-spacing: 2vh;
+  font-size: 26vmin;
+  letter-spacing: 2vmin;
 }
 .name-box > div {
   float: left;
@@ -23,8 +25,8 @@
 
 .circle {
   position: absolute;
-  width: 5vh;
-  height: 5vh;
+  width: 5vmin;
+  height: 5vmin;
   border-radius: 50%;
   background-color: #377;
   transition: top 0.2s, left 0.2s, background-color 0.5s;

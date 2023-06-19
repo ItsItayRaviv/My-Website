@@ -1,5 +1,4 @@
 .container {
-    margin: 48px 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,23 +15,25 @@
 
   .link-box{
     display: flex;
-    height: auto;
+    height: 30px;
+  }
+  .link-cell{
+    
     vertical-align: bottom;
   }
-
   .link:hover{
     margin-top: -3px;
     text-shadow: -15px 0 15px rgb(255, 148, 148), 15px 0 15px rgb(140, 140, 255);
-    font-size: 4vh;
-    margin-right: 4vh;
+    font-size: 30px;
+    margin-right: 17px;
   }
    
   .link{
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 3vh;
-    margin-right: 6vh;
+    font-size: 20px;
+    margin-right: 45px;
     display: flex;
     transition: 0.3s ease-in-out;
   }

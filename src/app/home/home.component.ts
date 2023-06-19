@@ -1,6 +1,7 @@
-import { Component, Renderer2, AfterViewInit } from '@angular/core';
+import { Component, Renderer2, AfterViewInit, HostListener } from '@angular/core';
 import { fromEvent } from 'rxjs';
-import { throttleTime } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-home',
@@ -30,13 +31,15 @@ export class HomeComponent implements AfterViewInit {
       this.content = contentBox;
       fromEvent<MouseEvent>(this.content, 'mousemove')
       .subscribe( (event: MouseEvent) =>
-        { this.onMouseMove(event);  } )
+        { this.moveCircles(event);  } )
     }
+
+    const resize$ = fromEvent(window, 'resize').pipe(debounceTime(200));
+    resize$.subscribe(() => this.resetCircles());
   }
 
-  onMouseMove(e: MouseEvent) {
+  moveCircles(e: MouseEvent) {
     if (this.moveReady) {
-      //console.log('mouse move');
         this.circles.forEach(circle => {
         this.renderer.setStyle(circle, 'top', `${e.clientY - this.content.offsetTop - 20}px`);
         this.renderer.setStyle(circle, 'left', `${e.clientX - this.content.offsetLeft - 20}px`);
@@ -44,33 +47,30 @@ export class HomeComponent implements AfterViewInit {
         setTimeout(() => this.moveReady = true, 50)
       });
     }
-    else{
-      //console.log('mouse move not ready');
-    }
   }
 
-  onMouseLeave() {
+  resetCircles() {
     //console.log('mouse leave');
     this.circles.forEach((circle) => {
       const height = this.content.clientHeight;
       const width = this.content.clientWidth;
-      this.renderer.setStyle(circle, 'background-color' , '#377');
+      this.paintCircles('#377')
       switch (circle.id) {
         case 'circle1':
           this.renderer.setStyle(circle, 'top', `${height * 0.015}px`);
-          this.renderer.setStyle(circle, 'left', `${width * 0.167}px`);
+          this.renderer.setStyle(circle, 'left', `${width * 0.166}px`);
           break;
         case 'circle2':
-          this.renderer.setStyle(circle, 'top', `${height * 0.533}px`);
-          this.renderer.setStyle(circle, 'left', `${width * 0.662}px`);
+          this.renderer.setStyle(circle, 'top', `${height * 0.502}px`);
+          this.renderer.setStyle(circle, 'left', `${width * 0.665}px`);
           break;
       }
     });
   }
-  onMouseEnter() {
-    //console.log('mouse enter');
+  paintCircles(color: string) {
     this.circles.forEach(circle => {
-      this.renderer.setStyle(circle, 'background-color' , 'white');
+      this.renderer.setStyle(circle, 'background-color' , color);
     });
+    console.log(color);
   }
 }

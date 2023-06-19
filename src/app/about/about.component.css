@@ -7,3 +7,26 @@
   font-size: x-large;
   font-weight: bolder;
 }
+a{
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+a > p {
+  position: absolute;
+  align-self: center;
+  top: 0;
+  margin-top: 12px;
+  color: aliceblue;
+  font-size: 17px;
+  text-shadow: -1px -1px 0 #000,  
+               1px -1px 0 #000,
+              -1px 1px 0 #000,
+               1px 1px 0 #000;
+}
+a > img {
+  display: block;
+  height: 60px;
+  width: fit-content;
+}
