@@ -6,6 +6,7 @@
    
   .navbar {
     background-color: darkslategray;
+    color: darkslategray;
     padding: 30px 50px;
     display: flex;
     align-items: center;
@@ -15,30 +16,56 @@
 
   .link-box{
     display: flex;
-    height: 30px;
+    height: 50px;
   }
   .link-cell{
-    
     vertical-align: bottom;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    height: fit-content;
+    position: absolute;
+    margin-top: 5px;
   }
-  .link:hover{
-    margin-top: -3px;
-    text-shadow: -15px 0 15px rgb(255, 148, 148), 15px 0 15px rgb(140, 140, 255);
-    font-size: 30px;
-    margin-right: 17px;
+  .link-cell:nth-child(1) {
+    left: 50px;
+  }
+  .link-cell:nth-child(2) {
+    left: 180px;
+  }
+  .link-cell:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+    .link{
+      font-size: 30px;
+      text-shadow: 0 0 3px #000;
+    }
   }
    
-  .link{
-    color: white;
+  .link, .cv-link {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    margin-right: 45px;
     display: flex;
     transition: 0.3s ease-in-out;
   }
-  
-  .logo img{
-    width: 10vw;
-    height: fit-content;
+
+  .link {
+    color: white;
+    margin: 10px;
+  }
+  .cv-link{
+    margin: 8px 8px 5px;
+    color: inherit;
+  }
+  .cv-link-cell {
+    color: inherit;
+    background-color: white;
+    border-radius: 12px 3px;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  .cv-link-cell:hover{
+    margin: 0 8px 0px 0;
+    box-shadow: 30px 5px rgba(255, 255, 200, 0.3);
   }

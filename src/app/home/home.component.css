@@ -2,14 +2,34 @@
   background-color: #acc;
   position: relative;
   cursor: none;
-  aspect-ratio: 1 1;
-  height: 75vmin;
+  height: 70vmin;
+  margin-top: 10%;
 }
+
 .description{
   height: 5vmin;
   width: 100%;
   background-color: #aaa;
+  display:flex;
 }
+.description-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-style: italic;
+}
+@media screen and (max-height: 500px) {
+  .description-text::after {
+    content: attr(data-acronym);
+  }
+}
+@media screen and (min-height: 500px) {
+  .description-text::after {
+    content: attr(data-full);
+  }
+}
+
 .name-box {
   width: 100%;
   display: flex;
@@ -18,10 +38,6 @@
   font-size: 26vmin;
   letter-spacing: 2vmin;
 }
-.name-box > div {
-  float: left;
-}
-
 
 .circle {
   position: absolute;
@@ -30,13 +46,4 @@
   border-radius: 50%;
   background-color: #377;
   transition: top 0.2s, left 0.2s, background-color 0.5s;
-}
-
-#circle1{
-    top: 1.5%;
-    left: 16.7%;
-}
-#circle2{
-    top: 53.3%;
-    left: 66.2%;
 }

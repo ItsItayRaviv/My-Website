@@ -36,6 +36,8 @@ export class HomeComponent implements AfterViewInit {
 
     const resize$ = fromEvent(window, 'resize').pipe(debounceTime(200));
     resize$.subscribe(() => this.resetCircles());
+
+    this.resetCircles();
   }
 
   moveCircles(e: MouseEvent) {
@@ -58,10 +60,10 @@ export class HomeComponent implements AfterViewInit {
       switch (circle.id) {
         case 'circle1':
           this.renderer.setStyle(circle, 'top', `${height * 0.015}px`);
-          this.renderer.setStyle(circle, 'left', `${width * 0.166}px`);
+          this.renderer.setStyle(circle, 'left', `${width * 0.163}px`);
           break;
         case 'circle2':
-          this.renderer.setStyle(circle, 'top', `${height * 0.502}px`);
+          this.renderer.setStyle(circle, 'top', `${height * 0.538}px`);
           this.renderer.setStyle(circle, 'left', `${width * 0.665}px`);
           break;
       }
