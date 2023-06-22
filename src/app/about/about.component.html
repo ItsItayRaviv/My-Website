@@ -1,13 +1,45 @@
-<div class="content">
-    <div class="header">About Me</div>
-    <p>Hey, I'm Itay. <br>
-        I like to code, draw, play video games and listen to music.</p>
-    <a href="mailto:{{myGmail}}"><p>&nbsp;&nbsp;&nbsp; Gmail</p><img [src]="gmLogo" alt="Gmail Logo"></a>
-   
-    <a href=""> LinkedIn </a>
-   
-    <a href="https://www.instagram.com/itay8raviv/"><p>Personal</p><img [src]="insgLogo" alt="Instagram"></a>
-
-    <a href="https://www.instagram.com/ravivdraws/"> <p>Drawing</p><img [src]="insgLogo" alt="Instagram"> </a><br>
-
+<div class="base">
+    <div class="card">
+        <div class="card-content">
+            <div class="front">
+                Email Address
+            </div>
+            <div class="back">
+                <div class="back-img-container">
+                    <img class="back-logo-img" [src]="gmLogo" alt="Gmail Logo">
+                </div>
+                <a class="back-link" href="mailto:itsitayraviv@gmail.com">
+                    ItsItayRaviv
+                    @gmail.com</a>
+            </div>  
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <div class="front">
+                GitHub Profile
+            </div>
+            <div class="back">
+                <div class="back-img-container">
+                    <img class="back-logo-img" [src]="gitLogo" alt="Instagram Logo">
+                </div>
+                <a class="back-link" href="https://github.com/ItsItayRaviv">
+                    Itay Raviv</a>
+            </div>  
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-content">
+            <div class="front">
+                Drawings Instagram
+            </div>
+            <div class="back">
+                <div class="back-img-container">
+                    <img class="back-logo-img" [src]="insgLogo" alt="Instagram Logo">
+                </div>
+                <a class="back-link" href="https://www.instagram.com/ravivdraws/">
+                    @RavivDraws</a>
+            </div>              
+        </div>
+    </div>
 </div>
