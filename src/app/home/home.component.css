@@ -1,14 +1,15 @@
 .base {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
 }
+
 .content{
   background-color: #acc;
   position: relative;
   cursor: none;
   height: 70vmin;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .description{
@@ -16,22 +17,17 @@
   width: 100%;
   background-color: #aaa;
   display:flex;
-}
-.description-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  font-style: italic;
-}
-@media screen and (max-height: 500px) {
-  .description-text::after {
-    content: attr(data-acronym);
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    font-style: italic;
   }
-}
-@media screen and (min-height: 500px) {
-  .description-text::after {
-    content: attr(data-full);
+  @media screen and (min-height: 500px) {
+    .text::after {
+      content: attr(data-full);
+    }
   }
 }
 
@@ -50,5 +46,5 @@
   height: 5vmin;
   border-radius: 50%;
   background-color: #377;
-  transition: top 0.2s, left 0.2s, background-color 0.5s;
+  transition: transform 0.5s, top 0.2s, left 0.2s, background-color 0.5s;
 }

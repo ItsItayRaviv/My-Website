@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'personal-website';
+  cvlink = "https://itay-raviv-cv.tiiny.site/";
 }

@@ -2,27 +2,20 @@
   <div class="content"
   (mouseleave)="resetCircles()"
   (mouseenter)="paintCircles('white')"
+  (click)="clickToNav($event)"
   id="contentBox">
-    <div class="circle" id="circle1"></div>
-    <div class="circle" id="circle2" ></div>
     <div class="name-box first">
-      <div class="name-text first"></div>
-      <div class="letter-i">
-        I
-      </div>
-      <div class="name-text">TAY</div>
+      ITAY
     </div>
     <div class="description">
-      <div class="description-text" data-acronym="H.A." data-full="Hobby Artist"></div>
-      <div class="description-text" data-acronym="D." data-full="Developer"></div>
-      <div class="description-text" data-acronym="L.E." data-full="Language Enthusiast"></div>
+      <div class="text" data-acronym="H.A." data-full="Hobby Artist"></div>
+      <div class="text" data-acronym="D." data-full="Developer"></div>
+      <div class="text" data-acronym="L.E." data-full="Language Enthusiast"></div>
     </div>
     <div class="name-box last">
-      <div class="name-text first">RAV</div>
-      <div class="letter-i">
-        I
-      </div>
-      <div class="name-text last">V</div>
+      RAVIV
     </div>
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2" ></div>
   </div>
 </div>
