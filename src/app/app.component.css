@@ -20,30 +20,22 @@
     height: fit-content;
     position: absolute;
     margin-top: 5px;
-  }
-  .link-cell:nth-child(1) {
-    left: 50px;
-  }
-  .link-cell:nth-child(2) {
-    left: 160px;
-  }
-  .link-cell:nth-child(3) {
-    left: 270px;
+    background-color: rgba(255, 255, 255, 0.1);
   }
   .link-cell:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(65, 54, 55, 0.4);
     margin-top: 0;
     .link{
       font-size: 30px;
-      text-shadow: 0 0 3px #000;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
     }
   }
    
   .link, .cv-link {
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
     transition: 0.3s ease-in-out;
   }
