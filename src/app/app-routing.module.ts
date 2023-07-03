@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { SocialsComponent } from './socials/socials.component';
 import { ArtComponent } from './about/art/art.component';
 import { CodeComponent } from './about/code/code.component';
+import { LanguageComponent } from './about/language/language.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'socials', component: SocialsComponent },
   { path: 'about', component: AboutComponent }, 
   { path: 'about/art', component: ArtComponent },
-  { path: 'about/code', component: CodeComponent }
+  { path: 'about/code', component: CodeComponent },
+  { path: 'about/language', component: LanguageComponent },
 ];
 
 @NgModule({

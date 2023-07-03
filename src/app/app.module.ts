@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { SocialsComponent } from './socials/socials.component';
 import { ArtComponent } from './about/art/art.component';
 import { CodeComponent } from './about/code/code.component';
+import { LanguageComponent } from './about/language/language.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CodeComponent } from './about/code/code.component';
     AboutComponent,
     SocialsComponent,
     ArtComponent,
-    CodeComponent
+    CodeComponent,
+    LanguageComponent
   ],
   imports: [
     BrowserModule,

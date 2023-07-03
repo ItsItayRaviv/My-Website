@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./art.component.css']
 })
 export class ArtComponent {
-
+  imgLinkSunset = 'https://www.linkpicture.com/q/lake-sunset-mountain.jpg';
+  imgLinkSoccer = 'https://www.linkpicture.com/q/soccer-drawing.webp';
 }

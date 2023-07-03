@@ -17,9 +17,9 @@ export class HomeComponent implements AfterViewInit {
     code: string;
     language: string;
   } = {
-    artist: "/home",
-    code: "/about",
-    language: "/socials"
+    artist: "/about/art",
+    code: "/about/code",
+    language: "/about/language"
   };
   private circles: Array<HTMLElement> = [];
   private content!: HTMLElement;
@@ -27,8 +27,8 @@ export class HomeComponent implements AfterViewInit {
   private inLinkArea = false;
   private height = 0;
   private width = 0;
-  private laTop = 0.45;
-  private laBot = 0.53;
+  private linkAreaTop = 0.45;
+  private linkAreaBot = 0.53;
 
   constructor(private renderer: Renderer2, private router: Router) {}
 
@@ -62,11 +62,11 @@ export class HomeComponent implements AfterViewInit {
     if (this.moveReady) {
       let topPos = e.clientY - this.content.offsetTop;
       let leftPos = e.clientX - this.content.offsetLeft;
-      if (!this.inLinkArea && this.height * this.laTop < topPos && topPos < this.height * this.laBot){
+      if (!this.inLinkArea && this.height * this.linkAreaTop < topPos && topPos < this.height * this.linkAreaBot){
         this.inLinkArea = true;
         this.linkEffect(true);
       }
-      if (this.inLinkArea && (this.height * this.laTop > topPos || topPos > this.height * this.laBot)){
+      if (this.inLinkArea && (this.height * this.linkAreaTop > topPos || topPos > this.height * this.linkAreaBot)){
         this.inLinkArea = false;
         this.linkEffect(false);
       }
@@ -118,14 +118,14 @@ export class HomeComponent implements AfterViewInit {
     if (this.inLinkArea){
       let leftPos = e.clientX - this.content.offsetLeft;
       if (leftPos < this.width / 3){
-        this.router.navigate(['/']);
+        this.router.navigate([this.links.artist]);
         return;
       }
       if (leftPos < (this.width / 3) * 2){
-        this.router.navigate(['/about']);
+        this.router.navigate([this.links.code]);
         return;
       }
-      this.router.navigate(['/socials']);
+      this.router.navigate([this.links.language]);
     }
   }
 }
