@@ -4,12 +4,16 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SocialsComponent } from './socials/socials.component';
+import { ArtComponent } from './about/art/art.component';
+import { CodeComponent } from './about/code/code.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'socials', component: SocialsComponent }
+  { path: 'socials', component: SocialsComponent },
+  { path: 'about', component: AboutComponent }, 
+  { path: 'about/art', component: ArtComponent },
+  { path: 'about/code', component: CodeComponent }
 ];
 
 @NgModule({
