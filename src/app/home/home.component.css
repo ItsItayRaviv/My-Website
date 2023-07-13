@@ -17,18 +17,27 @@
   width: 100%;
   background-color: #aaa;
   display:flex;
-  .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    font-style: italic;
+  
+}
+@media screen and (min-height: 500px) {
+  .text::after {
+    content: attr(data-full);
   }
-  @media screen and (min-height: 500px) {
-    .text::after {
-      content: attr(data-full);
-    }
-  }
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.33%;
+}
+
+.text {
+  font-style: italic;
+  transition: 300ms ease-out;
+}
+.text-box:hover{
+  font-size: larger;
 }
 
 .name-box {
@@ -41,6 +50,7 @@
 }
 
 .circle {
+  pointer-events: none;
   position: absolute;
   width: 5vmin;
   height: 5vmin;
