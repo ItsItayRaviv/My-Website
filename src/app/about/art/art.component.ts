@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import artPreview from 'src/app/models/artPreview.model';
 
 @Component({
   selector: 'app-art',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./art.component.css']
 })
 export class ArtComponent {
-  imgLinkSunset = 'https://www.linkpicture.com/q/lake-sunset-mountain.jpg';
-  imgLinkSoccer = 'https://www.linkpicture.com/q/soccer-drawing.webp';
+  art1 = new artPreview(
+    '/assets/images/lake_sunset.JPG',
+    '/assets/videos/lake_sunset_cut.mp4'
+  )
+  art2 = new artPreview(
+    '/assets/images/ss_ocean_sunrise.png',
+    '/assets/videos/ocean_sunrise.MP4'
+  )
 }

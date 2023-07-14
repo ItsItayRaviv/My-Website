@@ -1,0 +1,14 @@
+.preview-image,
+.preview-video {
+  width: 100%;
+}
+.preview-container:hover{
+  .preview-image{
+    display: none;
+  }
+}
+.preview-container:not(:hover){
+  .preview-video{
+    display: none;
+  }
+}

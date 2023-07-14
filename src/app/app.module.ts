@@ -9,6 +9,7 @@ import { SocialsComponent } from './socials/socials.component';
 import { ArtComponent } from './about/art/art.component';
 import { CodeComponent } from './about/code/code.component';
 import { LanguageComponent } from './about/language/language.component';
+import { ArtimgComponent } from './reusbales/artimg/artimg.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LanguageComponent } from './about/language/language.component';
     SocialsComponent,
     ArtComponent,
     CodeComponent,
-    LanguageComponent
+    LanguageComponent,
+    ArtimgComponent
   ],
   imports: [
     BrowserModule,
