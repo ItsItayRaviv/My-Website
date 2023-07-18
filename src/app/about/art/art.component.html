@@ -1,6 +1,8 @@
 <div class="base">
-    <div class="img-grid">
-        <div class="img"><artimg [art]="art2"></artimg></div>
-        <div class="img"><artimg [art]="art1"></artimg></div>
+    <div class="art-grid">
+        <div *ngFor="let art of artArray">
+            <div class="art-container"><artimg [art]="art"></artimg></div>
+        </div>
     </div>
+    <div class="empty-box"></div>
 </div>

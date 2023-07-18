@@ -1,22 +1,18 @@
-.img-grid {
+.art-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 80px;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+  @media screen and (min-width: 1550px) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+  };
 }
-.img {
+
+
+.art-container {
   width: 700px;
-  margin: 0 40px;
-}
-
-@media screen and (max-width: 800px) {
-  .img {
-    width: 500px;
-  }
-}
-
-@media screen and (max-width: 1550px) {
-  .img-grid {
-    grid-template-columns: 1fr;
+  @media screen and (max-width: 750px) {
+    width: 450px;
   }
 }
 
@@ -41,3 +37,7 @@
     }
   }
   
+
+.empty-box {
+  height: 300px;
+}
