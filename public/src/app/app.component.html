@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Itay Raviv</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="link-box">
+        <div class="link-cell" style="left: 50px;">
+          <a href="" class="link">Home</a>
+        </div>
+        <div class="link-cell" style="left: 160px;">
+          <a href="/about" class="link">About</a>
+        </div>
+        <div class="link-cell" style="left: 275px;">
+          <a href="/socials" class="link">Socials</a>
+        </div>
+      </div>
+      <a [href]="cvlink" target="_blank" class="cv-link-cell">
+        <div class="cv-link">Download CV</div>
+      </a>
+    </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </body>
+</html>

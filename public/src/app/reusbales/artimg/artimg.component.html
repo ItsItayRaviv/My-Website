@@ -1,0 +1,11 @@
+<div class="preview-art-container">
+    <h1 class="art-header">{{art?.title()}}</h1>
+    <div *ngIf="art?.isVideo(); else imageBlock">
+        <video [src]="art?.artUrl()" class="preview-video preview-art" muted></video>
+    </div>
+    <ng-template #imageBlock>
+        <img [src]="art?.artUrl()" class="preview-image preview-art"
+            [alt]="art?.title() + ' image'">
+    </ng-template>
+    <div class="art-desc" [innerHTML]="art?.desc() ? art?.desc() : 'Information unavailable'"></div>
+</div>

@@ -1,0 +1,43 @@
+.art-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+  @media screen and (min-width: 1550px) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+  };
+}
+
+
+.art-container {
+  width: 700px;
+  @media screen and (max-width: 750px) {
+    width: 450px;
+  }
+}
+
+  .base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(-45deg, #da9f68, #f099c4, #7fc5df, #89e4ac);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 20% 0%;
+    }
+    50% {
+      background-position: 80% 100%;
+    }
+    100% {
+      background-position: 20% 0%;
+    }
+  }
+  
+
+.empty-box {
+  height: 300px;
+}
